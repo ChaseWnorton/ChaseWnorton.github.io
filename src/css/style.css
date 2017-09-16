@@ -410,6 +410,7 @@ section.learning .mobile {
     .video-wrapper {
         max-width: 100%;
         width: auto;
+        background-color: gainsboro;
     }
 
     .thesis-wrapper {
