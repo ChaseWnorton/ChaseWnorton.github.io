@@ -1,0 +1,435 @@
+/** {*/
+    /*border: 1px solid;*/
+/*}*/
+
+/*General class defs*/
+html {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    color: darkslategrey;
+    line-height: 1.4;
+}
+a{
+    text-decoration: none;
+}
+
+
+.container {
+   max-width: 80rem;
+    margin: 0 auto;
+}
+
+.btn {
+    padding: .8rem;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+header#mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 550px) {
+    header#mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        height: 3.5rem;
+
+    }
+
+    header#desktop {
+        display: none;
+    }
+}
+
+
+
+/*Header CSS for aligning the Nav and logo properly*/
+header {
+    align-items: center;
+    box-shadow: 0 1px 5px #999;
+    -moz-box-shadow: 0 1px 5px #999;
+    -webkit-box-shadow: 0 1px 5px #999;
+}
+header > .container {
+    background-color: white;
+    height: 4rem;
+
+}
+
+/*Logo and Company name section*/
+header > .logo {
+    flex: 1;
+    align-items: center;
+    height: 2rem;
+    margin-left: 1.5rem;
+}
+
+.logo > h3 {
+    font-size: 1.5rem;
+}
+
+.logo > h3 > span {
+    color: darkgray;
+}
+
+/*Nav section*/
+nav ul li {
+    padding:0 .5rem;
+    list-style: none;
+}
+
+nav ul li a {
+    color: grey;
+    text-decoration: none;
+}
+
+nav ul li:nth-child(4n) {
+    padding-right: 1.5rem;
+}
+
+/*Main Content Begins*/
+main.container {
+    margin: .5rem auto;
+}
+
+/*Featured section for JUMBOOOO*/
+
+.jumbotron {
+    align-items: center;
+    background-color: gainsboro;
+}
+
+.jumbotron .jumbo-img-wrapper {
+    width: 60%;
+    padding: 2rem 1.5rem;
+}
+
+.jumbo-img-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.side-wrapper {
+    width: 40%;
+}
+
+.side-wrapper .contain {
+    max-width: 70%;
+}
+.side-wrapper .contain h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    line-height: 1.15;
+}
+
+.side-wrapper .contain p a {
+    color: white;
+}
+
+@media only screen and (max-width: 550px) {
+    .jumbotron {
+        flex-direction: column;
+    }
+
+    .jumbotron .jumbo-img-wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    .side-wrapper {
+        width: 100%;
+    }
+
+    .side-wrapper .contain {
+        max-width: 100%;
+        margin: 2rem 1rem;
+    }
+
+    .side-wrapper .contain h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/*Information Section*/
+.information {
+    background-color: white;
+}
+.supplement {
+    margin: 2rem 1.5rem;
+    width: 60%;
+}
+
+.supplement img {
+    width: 100%;
+}
+
+.supplement h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+.upcoming {
+    width: 40%;
+    border-left: 1px solid rgba(216,216,216,0.5);
+    padding-top: 1rem;
+}
+
+.upcoming-item {
+    align-items: center;
+    padding: 1rem;
+}
+.upcoming-item img.desktop {
+    width: 35%;
+    height: auto;
+    margin-right: 1rem;
+
+}
+
+.upcoming-item img.mobile {
+    display: none;
+}
+.upcoming-item-info {
+    width: 65%;
+}
+
+.upcoming-item:nth-child(3n) {
+    background-color: gainsboro;
+}
+
+.upcoming-item:first-child {
+    border-bottom: 3px solid rgba(216,216,216,0.5);
+}
+
+.upcoming-item-info h3{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.upcoming-item-info a {
+    color: cornflowerblue;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .information {
+        flex-direction: column;
+    }
+    .supplement {
+        display: none;
+    }
+
+    .upcoming {
+        max-width: 100%;
+        width: auto;
+        padding-top: 0;
+    }
+
+    .upcoming-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        padding: 0;
+    }
+
+    .upcoming-item img.desktop {
+        display: none;
+    }
+
+    .upcoming-item img.mobile {
+        display: flex;
+        max-width: 100%;
+    }
+    .upcoming-item:first-child {
+        border-bottom: none;
+    }
+
+    .upcoming-item:nth-child(3n) {
+        background-color: white;
+        border-bottom: 3px solid rgba(216,216,216,0.5);
+
+    }
+
+    .upcoming-item-info {
+        max-width: 100%;
+        width: auto;
+        margin: 0 1rem 2rem 1rem;
+    }
+}
+
+/*Learning Section*/
+
+.learning {
+    background-color: gainsboro;
+    padding: 0 2.5rem;
+}
+
+.learning > h2 {
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 2.4rem;
+}
+
+.course {
+    width: 33%;
+    height: auto;
+    margin: 2rem;
+    background-color: white;
+}
+
+.course img {
+    width: 100%;
+}
+
+.course-info {
+    padding: 1rem;
+}
+
+.course-info h3 {
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.course-info p {
+    padding-bottom: .5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section.learning .mobile {
+    display: none;
+
+}
+@media only screen and (max-width: 550px) {
+    .learning {
+        background-color: white;
+        padding: 0 2rem;
+        border-bottom: 3px solid rgba(216,216,216,0.5);
+    }
+
+    .courses-wrapper {
+        display: none;
+    }
+
+    section.learning .mobile {
+        display: flex;
+        margin:0 1rem 2rem 1rem;
+    }
+
+    section.learning .mobile h4 {
+        font-size: 1.1rem;
+        background-color: gainsboro;
+        padding: 1rem 0 1.5rem 1rem;
+        margin: .5rem;
+    }
+
+    section.learning .mobile a {
+        color: darkslategray;
+    }
+
+    section.learning .mobile a:last-child {
+
+    }
+
+
+
+
+}
+
+/*Thesis Start*/
+
+.thesis-wrapper {
+    margin-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+.thesis > h2 {
+    padding-top: 1rem;
+    font-size: 2.4rem;
+    text-align: center;
+}
+.video-wrapper {
+    width: 60%;
+}
+.exhibit-wrapper {
+    width: 40%;
+    margin-left: 1.5rem;
+}
+
+.exhibit-wrapper .exhibit:first-child{
+    background-color: gainsboro;
+}
+
+.exhibit-wrapper img {
+    width: 35%;
+    height: auto;
+    padding: 1rem;
+}
+
+.exhibit {
+    align-items: center;
+}
+
+.video-text h2 {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+@media only screen and (max-width: 550px) {
+    .exhibit-wrapper {
+        display: none;
+    }
+
+    .video-text {
+        display: none;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+        width: auto;
+    }
+
+    .thesis-wrapper {
+        margin: 0;
+    }
+}
+
+footer {
+    border-top: 1px solid rgba(216,216,216,0.5);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+footer ul {
+    justify-content: space-between;
+}
+
+@media only screen and (max-width: 550px) {
+    footer nav {
+        display: none;
+    }
+}
